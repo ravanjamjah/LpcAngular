@@ -1,0 +1,19 @@
+Forms in AngularJS provides data-binding and validation of input controls.
+
+Input controls are the HTML input elements:
+  - input elements
+  - select elements
+  - button elements
+  - textarea elements
+
+Input controls provides data-binding by using the ng-model directive.
+ <form>
+  First Name: <input type="text" ng-model="firstname">
+</form>
+<h1>You entered: {{firstname}}</h1>
+<script>
+  var app = angular.module('myApp', []);
+  app.controller('formCtrl', function($scope) {
+    $scope.firstname = "John";
+  });
+</script>
